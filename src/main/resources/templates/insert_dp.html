@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DB登録</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- 部署マスタ登録画面 -->
+	<h1>DB登録（部署マスタ:DEPARTMENT）</h1>
+	<div id="access">
+		<form method="post" action="register_dp">
+		
+			<!-- テキストボックス（必須項目） -->
+			<span class="color-red">部署コード</span><input type="text" name="d_num" maxlength="2" required="required">
+			<span class="color-red">部署名</span><input type="text" name="d_name" maxlength="20" required="required">
+						
+			<!-- 登録ボタン -->	
+			<div id="insert">
+				<input type="submit" class="btn btn-outline-success" value="登録">
+			</div>
+		</form>
+	</div>
+		
+</body>
+</html>

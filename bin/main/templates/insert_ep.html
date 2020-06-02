@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DB登録</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- 従業員名簿登録画面 -->
+	<h1>DB登録（従業員名簿:EMPLOYEE）</h1>
+	<div id="access">
+		<form method="post" action="register_ep">
+		
+			<!-- テキストボックス（必須項目） -->
+			<span class="color-red">社員No</span><input type="text" name="e_num" maxlength="5" required="required">
+			<span class="color-red">氏名</span><input type="text" name="e_name" maxlength="40" required="required">
+			<span class="color-red">入社年</span><input type="text" name="e_year" maxlength="4" required="required">
+			
+			<!-- テキストボックス -->
+			<span>所属部署</span><input type="text" name="depart_cd">
+			
+			<!-- 登録ボタン -->
+			<div id="insert">
+				<input type="submit" class="btn btn-outline-success" value="登録">
+			</div>
+		</form>
+	</div>
+		
+</body>
+</html>
