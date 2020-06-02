@@ -12,28 +12,35 @@ import javax.persistence.Table;
 @Table(name="M_CUSTOMER")
 public class Customer {
 	@Id
-	@Column(name="C_CD" ,columnDefinition = "VARCHAR(4)")
+	
+	// データ取得
+	@Column(name="C_CD" ,columnDefinition = "VARCHAR(4)")	// 顧客コード
 	private String c_num;
 	
-	@Column(name="C_NAME" ,nullable = false ,columnDefinition = "VARCHAR(100)")
+	@Column(name="C_NAME" ,nullable = false ,columnDefinition = "VARCHAR(100)")	// 顧客名
 	private String c_name;
 	
-	@Column(name="ADDRESS" ,columnDefinition = "VARCHAR(256)")
+	@Column(name="ADDRESS" ,columnDefinition = "VARCHAR(256)")		// 住所
 	private String address;
+	
+	@Column(name="TEL" ,columnDefinition = "VARCHAR(11)")			// 電話番号
+	private String tel;
 
-	@Column(name="UPDATE_DATE" ,columnDefinition = "datetime")
+	@Column(name="UPDATE_DATE" ,columnDefinition = "datetime")		// 更新日時
 	private Timestamp update_date;
 
-	@Column(name="UPDATE_USER" ,columnDefinition = "VARCHAR(40)")
+	@Column(name="UPDATE_USER" ,columnDefinition = "VARCHAR(40)")	// 更新者
 	private String update_user;
-
-	@Column(name="CREATE_DATE" ,columnDefinition = "datetime")
+	
+	@Column(name="CREATE_DATE" ,columnDefinition = "datetime")		// 作成日時
 	private Timestamp create_date;
 
-	@Column(name="CREATE_USER" ,columnDefinition = "VARCHAR(40)")
+	@Column(name="CREATE_USER" ,columnDefinition = "VARCHAR(40)")	 // 作成者
 	private String create_user;
 	
-	public String getC_num() {
+	
+	// セッタとゲッタ
+	public String getC_num() {	
 		return c_num;
 	}
 	public void setC_num(String c_num) {
@@ -48,23 +55,29 @@ public class Customer {
 	public String getAddress() {
 		return address;
 	}
-	public void setAddress(String address) {
+	public void setAddress(String address) {	
 		this.address = address;
-	}	
-
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	
 	
 	public void setAll(  String c_num
 						,String c_name
 						,String address
+						,String tel
 						) {
 		this.c_num = c_num;
 		this.c_name = c_name;
 		this.address = address;
-		
+		this.tel = tel;		
 	}
 	
 	
-
 	public Timestamp getCreate_date() {
 		return create_date;
 	}
@@ -91,3 +104,4 @@ public class Customer {
 	}
 
 }
+

@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-	<meta charset="UTF-8">
-	<title>DBアクセス</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" >
-	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css">
-</head>
-<body>
-	<h1>DBアクセス</h1>
-	<div id="access">
-		<div>
-			<a href="/insert" >データ登録（顧客名簿:CUSTOMER）</a>
+	<head>
+		<meta charset="UTF-8">
+		<title>DBアクセス</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" >
+		<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<!-- DBアクセス画面 -->
+		<h1>DBアクセス</h1>
+		<div id="access">
+			<div>
+				<a href="/insert">データ登録（顧客名簿:CUSTOMER）</a>
+			</div>
+			
+			<div>
+				<a href="/all">データ一覧（顧客名簿:CUSTOMER）</a>
+			</div>
+			
+			<div>
+				<a href="/insert_dp">データ登録（部署マスタ:DEPARTMENT）</a>
+			</div>
+			
+			<div>
+				<a href="/all_dp">データ一覧（部署マスタ:DEPARTMENT）</a>
+			</div>
+			
+			<div>
+				<a href="/insert_ep">データ登録（従業員名簿:EMPLOYEE）</a>
+			</div>
+			
+			<div>
+				<a href="/all_ep">データ一覧（従業員名簿:EMPLOYEE）</a>
+			</div>
 		</div>
-		
-		<div>
-			<a href="/all" >データ一覧（顧客名簿:CUSTOMER）</a>
-		</div>
-		
-	</div>
-</body>
+	</body>
 </html>

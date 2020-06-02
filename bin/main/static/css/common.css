@@ -15,7 +15,7 @@ span{
 	width: 300px;
 }
 
-.colorr-red{
+.color-red{
 	color: red;
 }
 
@@ -24,6 +24,16 @@ input[type="text"]{
 }
 
 #insert{
+	margin-top:30px;
+	text-align:center;
+}
+
+#insert_dp{
+	margin-top:30px;
+	text-align:center;
+}
+
+#insert_ep{
 	margin-top:30px;
 	text-align:center;
 }
